@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-size: clamp(1rem, 4vh, 1.5rem);
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a:any-link {
+    text-decoration: none;
+    color: #1b1b32;
+}
+
+
+/*  ======================== NAV LIST ================== */
+
+nav .first__ul {
+    background-color: #f0ff;
+    column-gap: 2.7rem;
+    display: flex;
+    position: relative;
+}
+
+nav .first__ul li:nth-of-type(3)::after {
+    color: #1b1b32;
+    content: " ⬇";
+    font-size: clamp(1rem, 2vw, 1.45rem);
+    font-weight: bold;
+    left: 365px;
+    position: fixed;
+    top: 16px;
+}
+
+
+/*  ===================== SECOND LIST ======================= */
+
+.first__ul li a:not(.second__ul li a) {
+    display: block;
+    padding: 1rem;
+}
+
+.first__ul li a:hover {
+    background-color: #f1f5f8;
+}
+
+
+/* ===================== SECOND LIST ========================== */
+
+.first__ul li .second__ul:not(.third__ul) {
+    background-color: #242424e9;
+    border: 2px solid #f0ff;
+    box-shadow: 5px 5px 5px #2e2c2c;
+    display: none;
+    position: absolute;
+}
+
+.first__ul li .second__ul li:nth-of-type(2):not(.third__ul li)::after {
+    color: #f5f5f5;
+    content: " ▶";
+    font-size: clamp(0.4rem, 2vw, 0.8rem);
+    font-weight: bold;
+    left: 460px;
+    position: fixed;
+    top: 150px;
+    z-index: 1000;
+}
+
+.first__ul li .second__ul li a:any-link {
+    color: #f1f5f8;
+}
+
+.first__ul li .second__ul li a {
+    display: block;
+    padding: 1rem 1.8rem;
+}
+
+.first__ul li .second__ul li a:hover {
+    color: #1b1b32;
+    background-color: #0f0;
+}
+
+.first__ul li:hover .second__ul {
+    display: block;
+}
+
+
+/* ==============================THIRD LIST ============================= */
+
+.third__ul {
+    background-color: #242424e9;
+    border: 2px solid #ebc0c0;
+    box-shadow: 5px -5px 5px #2e2c2c;
+    display: none;
+    left: 187px;
+    position: absolute;
+    top: 60px;
+}
+
+.first__ul li .second__ul li .third__ul li:nth-of-type(3) {
+    position: relative;
+}
+
+.first__ul li .second__ul li .third__ul li:nth-of-type(3):not(.fourth__ul li):after {
+    color: #f5f5f5;
+    content: " ▶";
+    font-size: clamp(0.4rem, 2vw, 0.8rem);
+    font-weight: bold;
+    left: 174px;
+    position: absolute;
+    top: 29px;
+    z-index: 1000;
+}
+
+.second__ul li a {
+    border-top: 2px solid #ccc3c3;
+}
+
+.second__ul li:hover .third__ul {
+    display: block;
+}
+
+
+/*  ========================= FOURTH LIST ======================== */
+
+.fourth__ul {
+    background-color: #242424e9;
+    border: 2px solid #ebc0c0;
+    box-shadow: 5px 5px 5px #2e2c2c;
+    display: none;
+    left: 190px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.first__ul li .second__ul li .fourth__ul li a:hover {
+    background-color: #0f0e0e;
+    color: aliceblue;
+}
+
+.third__ul li:hover .fourth__ul {
+    display: block;
+}
